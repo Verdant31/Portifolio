@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export const Header: React.FC = () => {
   return (
-    <header className="sticky top-0 flex justify-between max-w-7xl p-5 mx-auto z-20">
+    <header className="items-center sticky top-0 flex justify-between max-w-7xl p-5 mx-auto z-20">
       <motion.div
         initial={{ x: -500, opacity: 0, scale: 0.5 }}
         animate={{ x: 0, opacity: 1, scale: 1 }}
@@ -26,6 +26,25 @@ export const Header: React.FC = () => {
           fgColor="gray"
           bgColor="transparent"
         />
+      </motion.div>
+      <motion.div
+        className="flex gap-x-6 mt-2"
+        initial={{ x: -500, opacity: 0, scale: 0.5 }}
+        animate={{ x: 0, opacity: 1, scale: 1 }}
+        transition={{ duration: 1.5 }}
+      >
+        <a href="#" className="linkToSections">
+          SOBRE MIM
+        </a>
+        <a href="#" className="linkToSections">
+          EXPERIÊNCIA
+        </a>
+        <a href="#" className="linkToSections">
+          SKILLS
+        </a>
+        <a href="#" className="linkToSections">
+          PROJETOS
+        </a>
       </motion.div>
       <motion.div
         initial={{ x: 500, opacity: 0, scale: 0.5 }}
