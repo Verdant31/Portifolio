@@ -8,8 +8,11 @@ module.exports = {
           700: '#333333',
           900: 'rgb(36, 36, 36)',
         },
+        green: {
+          500: '#02cd1a'
+        }
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar')],
 }

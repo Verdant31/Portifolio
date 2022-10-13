@@ -22,10 +22,24 @@ export const Hero: React.FC = () => {
             alt="Imagem de um triangulo"
           />
         </div>
-        <h1 className="text-gray-50 w-full absolute top-[50%] left-[50%] -translate-y-1/2	-translate-x-1/2 text-4xl ">
+        <h1 className="text-gray-200 w-full absolute top-[50%] left-[50%] -translate-y-1/2	-translate-x-1/2 text-4xl ">
           <span>{text}</span>
-          <Cursor cursorColor="#F7AB0A" />
+          <Cursor cursorColor="#02cd1a" />
         </h1>
+      </div>
+      <div className="flex gap-x-6 mt-12">
+        <a href="#about" className="linkToSections">
+          SOBRE MIM
+        </a>
+        <a href="#experience" className="linkToSections">
+          EXPERIÊNCIA
+        </a>
+        <a href="#skills" className="linkToSections">
+          SKILLS
+        </a>
+        <a href="#projects" className="linkToSections">
+          PROJETOS
+        </a>
       </div>
     </div>
   )
