@@ -1,8 +1,13 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { ExperienceCard } from './ExperienceCard'
+import { Experience as TExperience } from '../@types/types'
 
-export const Experience: React.FC = () => {
+interface ExperienceProps {
+  experiences: TExperience[]
+}
+
+export const Experience = ({ experiences }: ExperienceProps) => {
   return (
     <motion.div
       className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl 

@@ -29,10 +29,10 @@ export default function App() {
         <Hero />
       </section>
       <section id="about" className="snap-center">
-        <About />
+        {data && <About about={data.about} />}
       </section>
       <section id="experience" className="snap-center">
-        <Experience />
+        {data && <Experience experiences={data.experiences} />}
       </section>
       <section id="skills" className="snap-start">
         <Skills />

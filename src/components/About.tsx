@@ -1,7 +1,12 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { About as TAbout } from '../@types/types'
 
-export const About: React.FC = () => {
+interface AboutProps {
+  about: TAbout
+}
+
+export const About = ({ about }: AboutProps) => {
   return (
     <motion.div
       className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center"
@@ -22,7 +27,7 @@ export const About: React.FC = () => {
           duration: 1.5,
         }}
         whileInView={{ x: 0, opacity: 1 }}
-        src="profilePic.png"
+        src={about.profilePic}
         viewport={{ once: true }}
       />
       <div className="space-y-10 px-0 md:px-10 ">
@@ -30,16 +35,7 @@ export const About: React.FC = () => {
           Aqui vai um{' '}
           <span className="underline decoration-[#02cd1a]">breve</span> resumo
         </h4>
-        <p className="text-base">
-          Ola! No momento eu sou um desenvolvedor React em busca de se tornar
-          Fullstack em um futuro não tão distante. Sou apaixonado pelo universo
-          React, por Javascript e por Typescript. Gosto bastante de ajudar os
-          outros da maneira que consigo, seja com informações ou com uma simples
-          motivação. Nem todos meus projetos acabo postando no Linkedin, caso se
-          interesse, esse é meu GitHub: GitHub: https://github.com/Verdant31
-          Como um bom programador, também sou muito fã de joguinhos online.
-          Manda um alô!
-        </p>
+        <p className="text-base">{about.about}</p>
       </div>
     </motion.div>
   )

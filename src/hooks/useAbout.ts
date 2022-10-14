@@ -6,7 +6,7 @@ export const useAbout = async (): Promise<About> => {
     return {
       about: res.data.data[0].attributes.resume,
       profilePic:
-        'http://localhost:1337/' +
+        'http://localhost:1337' +
         res.data.data[0].attributes.profilePicture.data.attributes.url,
     }
   })
