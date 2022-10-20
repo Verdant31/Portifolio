@@ -17,7 +17,7 @@ export const ContactMe: React.FC = () => {
     e.preventDefault();
     if (!messageRef.current?.value) return;
     await axios
-      .get("http://localhost:3000/api/sendemail", {
+      .get(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/sendemail`, {
         params: {
           message: messageRef.current?.value,
           name: nameRef.current?.value,
