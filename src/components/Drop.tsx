@@ -6,7 +6,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 export const Drop: React.FC = () => {
   const { changeLanguage } = useLanguage();
   return (
-    <div className="fixed lg:bottom-12 bottom-4 right-12 -translate-x-1/2 z-40 ">
+    <div className="fixed lg:bottom-12 bottom-4 right-6 -translate-x-1/2 z-40 ">
       <Popover className="relative">
         <Popover.Button className="outline-none">
           <Gear
