@@ -29,7 +29,7 @@ export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
           return (
             <div
               key={project.title}
-              className="pt-36 px-8 w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center h-screen"
+              className="pt-44 px-8 w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center h-screen"
             >
               <motion.img
                 initial={{ y: -300, opacity: 0 }}

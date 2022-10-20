@@ -22,7 +22,7 @@ export const About = ({ about }: AboutProps) => {
       </h1>
       <div />
       <motion.img
-        className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 object-cover md:w-80 md:h-80 xl:w-[500px] xl:h-[500px] xl:mr-8"
+        className="-mb-16 sm:-mb-20 md:mb-0 flex-shrink-0 w-42 h-40 sm:w-56 sm:h-56 object-cover md:w-80 md:h-80 xl:w-[500px] xl:h-[500px] xl:mr-8"
         initial={{
           x: -200,
           opacity: 0,
@@ -35,7 +35,7 @@ export const About = ({ about }: AboutProps) => {
         viewport={{ once: true }}
       />
       <div className="space-y-5 px-0 md:px-10 ">
-        <h4 className="text-4xl font-semibold">
+        <h4 className="text-2xl md:text-4xl font-semibold">
           {currentLanguage === "pt" ? "Aqui vai um " : "Here is a "}
           {currentLanguage === "pt" ? (
             <>

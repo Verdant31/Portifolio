@@ -17,7 +17,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         "Este projeto foi um desafio da trilha de ReactJS do programa de aceleração para devs, o Ignite da Rocketseat. O Projeto foi feito em React e inicializado com a ferramenta ViteJS, além do CSS modules para estilização.",
       descriptionEn:
         "This project was a challenge from the ReactJS track of the accelerator program for devs, Rocketseat's Ignite. The Project was made in React and initialized with the ViteJS tool, in addition to CSS modules for styling.",
-      mockup: `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/todo-mockup.pg`,
+      mockup: `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/todo-mockup.png`,
     },
   ];
   res.status(200).json(projects);
