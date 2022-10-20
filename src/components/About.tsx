@@ -1,12 +1,15 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import { About as TAbout } from '../@types/types'
+import React from "react";
+import { motion } from "framer-motion";
+import { About as TAbout } from "../@types/types";
+import { useLanguage } from "../contexts/LanguageContext";
 
 interface AboutProps {
-  about: TAbout
+  about: TAbout;
 }
 
 export const About = ({ about }: AboutProps) => {
+  const { currentLanguage } = useLanguage();
+
   return (
     <motion.div
       className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center"
@@ -14,11 +17,12 @@ export const About = ({ about }: AboutProps) => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
     >
-      <h1 className="tracking-[12px] absolute top-32 uppercase trackng-[20px] text-gray-500 text-2xl">
-        Sobre mim
+      <h1 className="tracking-[12px] absolute top-24 uppercase trackng-[20px] text-gray-500 text-2xl">
+        {currentLanguage === "pt" ? "SOBRE MIM" : "ABOUT ME"}
       </h1>
+      <div />
       <motion.img
-        className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 object-cover md:w-96 md:h-96 xl:w-[600px] xl:h-[600px] "
+        className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 object-cover md:w-80 md:h-80 xl:w-[500px] xl:h-[500px] xl:mr-8"
         initial={{
           x: -200,
           opacity: 0,
@@ -30,13 +34,27 @@ export const About = ({ about }: AboutProps) => {
         src={about.profilePic}
         viewport={{ once: true }}
       />
-      <div className="space-y-10 px-0 md:px-10 ">
+      <div className="space-y-5 px-0 md:px-10 ">
         <h4 className="text-4xl font-semibold">
-          Aqui vai um{' '}
-          <span className="underline decoration-[#02cd1a]">breve</span> resumo
+          {currentLanguage === "pt" ? "Aqui vai um " : "Here is a "}
+          {currentLanguage === "pt" ? (
+            <>
+              <span className="underline decoration-[#02cd1a]">breve</span>{" "}
+              resumo
+            </>
+          ) : (
+            <>
+              <span className="underline decoration-[#02cd1a]">little</span>{" "}
+              background
+            </>
+          )}
         </h4>
-        <p className="text-base">{about.about}</p>
+        {currentLanguage === "pt" ? (
+          <p className="text-base">{about.about}</p>
+        ) : (
+          <p className="text-base">{about.aboutEn}</p>
+        )}
       </div>
     </motion.div>
-  )
-}
+  );
+};

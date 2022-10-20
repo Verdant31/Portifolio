@@ -1,13 +1,18 @@
-import { Data } from '../@types/types'
-import { useAbout } from './useAbout'
-import { useExperiences } from './useExperiences'
-import { useProjects } from './useProjects'
-import { useSkills } from './useSkills'
+import axios from "axios";
+import { Data } from "../@types/types";
 
 export const useData = async (): Promise<Data> => {
-  const projects = await useProjects()
-  const about = await useAbout()
-  const experiences = await useExperiences()
-  const skills = await useSkills()
-  return { projects, about, experiences, skills }
-}
+  const about = await axios
+    .get("http://localhost:3000/api/about")
+    .then((res) => res.data);
+  const projects = await axios
+    .get("http://localhost:3000/api/projects")
+    .then((res) => res.data);
+  const experiences = await axios
+    .get("http://localhost:3000/api/experience")
+    .then((res) => res.data);
+  const skills = await axios
+    .get("http://localhost:3000/api/skill")
+    .then((res) => res.data);
+  return { projects, about, experiences, skills };
+};

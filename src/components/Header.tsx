@@ -1,6 +1,6 @@
-import React from 'react'
-import { SocialIcon } from 'react-social-icons'
-import { motion } from 'framer-motion'
+import React from "react";
+import { SocialIcon } from "react-social-icons";
+import { motion } from "framer-motion";
 
 export const Header: React.FC = () => {
   return (
@@ -12,22 +12,22 @@ export const Header: React.FC = () => {
         className="flex items-center pb-1"
       >
         <SocialIcon
-          url="https://www.youtube.com/joaocraft3110"
+          url="https://www.github.com/verdant31"
           fgColor="gray"
           bgColor="transparent"
         />
         <SocialIcon
-          url="https://www.youtube.com/joaocraft3110"
+          url="https://www.linkedin.com/in/jo%C3%A3o-pedro-soares-piovesan-724235191/"
           fgColor="gray"
           bgColor="transparent"
         />
         <SocialIcon
-          url="https://www.youtube.com/joaocraft3110"
+          url="https://www.instagram.com/joaopiovesan3110/"
           fgColor="gray"
           bgColor="transparent"
         />
       </motion.div>
-      <p className="absolute left-[50%] -translate-x-1/2 text-gray-400 italic">
+      <p className="hidden md:flex absolute left-[50%] -translate-x-1/2  text-gray-400 italic">
         Never Stop Learning.
       </p>
       <motion.div
@@ -36,11 +36,16 @@ export const Header: React.FC = () => {
         transition={{ duration: 1.5 }}
         className="flex items-center text-gray-300 cursor-pointer"
       >
-        <SocialIcon network="email" fgColor="gray" bgColor="transparent" />
+        <SocialIcon
+          url="mailto:verdantxd@gmail.com"
+          network="email"
+          fgColor="gray"
+          bgColor="transparent"
+        />
         <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
           Entre em contato
         </p>
       </motion.div>
     </header>
-  )
-}
+  );
+};
