@@ -1,6 +1,5 @@
 import axios from "axios";
 import { Data } from "../@types/types";
-import { api } from "../services/api";
 
 export const useData = async (): Promise<Data> => {
   const about = await axios.get("/api/about").then((res) => res.data);
