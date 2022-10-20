@@ -17,7 +17,7 @@ export const ContactMe: React.FC = () => {
     e.preventDefault();
     if (!messageRef.current?.value) return;
     await axios
-      .get(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/sendemail`, {
+      .get(`localhost:3000/api/sendemail`, {
         params: {
           message: messageRef.current?.value,
           name: nameRef.current?.value,
@@ -47,10 +47,10 @@ export const ContactMe: React.FC = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
     >
-      <h3 className="tracking-[12px] absolute top-24 uppercase trackng-[20px] text-gray-500 text-2xl">
+      <h3 className="tracking-[12px] absolute top-20 xsm:top-24 uppercase trackng-[20px] text-gray-500 text-2xl">
         {currentLanguage === "pt" ? "CONTATO" : "CONTACT"}
       </h3>
-      <div className="flex flex-col space-y-10">
+      <div className="flex flex-col xsm:space-y-10 space-y-6">
         <h4 className="text-xl md:text-4xl font-semibold text-center px-4">
           {currentLanguage === "pt"
             ? "Posso te ajudar com o desenvolvimento de sites. "
@@ -59,7 +59,7 @@ export const ContactMe: React.FC = () => {
             {currentLanguage === "pt" ? "Bora conversar?" : "Let's talk?"}
           </span>
         </h4>
-        <div className="space-y-10">
+        <div className="space-y-4">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-green-500 h-7 w-7 animate-pulse" />
             <p>+55 (67) 99973-6552</p>

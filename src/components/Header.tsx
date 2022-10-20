@@ -12,17 +12,17 @@ export const Header: React.FC = () => {
         className="flex items-center pb-1"
       >
         <SocialIcon
-          url="https://www.github.com/verdant31"
+          url="http://www.github.com/verdant31"
           fgColor="gray"
           bgColor="transparent"
         />
         <SocialIcon
-          url="https://www.linkedin.com/in/jo%C3%A3o-pedro-soares-piovesan-724235191/"
+          url="http://www.linkedin.com/in/jo%C3%A3o-pedro-soares-piovesan-724235191/"
           fgColor="gray"
           bgColor="transparent"
         />
         <SocialIcon
-          url="https://www.instagram.com/joaopiovesan3110/"
+          url="http://www.instagram.com/joaopiovesan3110/"
           fgColor="gray"
           bgColor="transparent"
         />

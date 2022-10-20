@@ -18,7 +18,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         "Daily use of services such as Firebase and GCP (Google Cloud Platform) in projects.",
         "Squad leadership.",
       ],
-      logo: `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/alest.png`,
+      logo: `http://${process.env.NEXT_PUBLIC_VERCEL_URL}/alest.png`,
     },
     {
       title: "Desenvolvedor Full Stack",
@@ -35,7 +35,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         "Creation of web platforms to automate bureaucratic processes of the institution.",
         "Responsible for the development of both Backend and Frontend in all projects, using technologies such as React, NodeJS, Heroku and PostgreSQL.",
       ],
-      logo: `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/up.png`,
+      logo: `http://${process.env.NEXT_PUBLIC_VERCEL_URL}/up.png`,
     },
   ];
   res.status(200).json(projects);
