@@ -36,15 +36,26 @@ export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                 transition={{ duration: 1.2 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="rounded-md w-[380px] h-[190px] sm:w-[500px] sm:h-[320px] md:w-[600px] md:h-[340px] lg:w-[600px] lg:h-[380px] lg:mt-14"
+                className={`rounded-md lg:mt-14
+                  ${
+                    project.title !== "SaveIt"
+                      ? "w-[380px] h-[190px] sm:w-[500px] sm:h-[320px] md:w-[600px] md:h-[340px] lg:w-[600px] lg:h-[380px]"
+                      : "w-[180px] h-[240px]  sm:h-[320px] md:w-[200px] md:h-[340px]"
+                  }
+                `}
                 src={project.mockup}
                 alt=""
               />
               <div className="space-y-4 md:space-y-10 px-0 md:px-10 max-w-6xl lg:pt-14">
                 <h4 className="text-2xl lg:text-4xl font-semibold text-center">
-                  <span className="underline decoration-green-500/50 ">
+                  <a
+                    target="_blank"
+                    href={project.link}
+                    className="underline decoration-green-500/50 cursor-pointer"
+                    rel="noreferrer"
+                  >
                     {project.title}
-                  </span>{" "}
+                  </a>{" "}
                 </h4>
                 {currentLanguage === "pt" ? (
                   <p className="text-base sm:text-lg text-center lg:text-left">

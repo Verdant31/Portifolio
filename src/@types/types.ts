@@ -33,6 +33,7 @@ export type Project = {
   mockup: string;
   description: string;
   descriptionEn: string;
+  link: string;
 };
 
 export type ProjectRes = {
