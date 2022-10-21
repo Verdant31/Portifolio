@@ -29,7 +29,7 @@ export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
           return (
             <div
               key={project.title}
-              className="pt-44 px-8 w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center h-screen"
+              className="pt-32 px-8 w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center h-screen"
             >
               <motion.img
                 initial={{ y: -300, opacity: 0 }}
@@ -43,16 +43,15 @@ export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
               <div className="space-y-4 md:space-y-10 px-0 md:px-10 max-w-6xl">
                 <h4 className="text-2xl lg:text-4xl font-semibold text-center">
                   <span className="underline decoration-green-500/50 ">
-                    Case Study {index + 1} of {projects.length}:
+                    {project.title}
                   </span>{" "}
-                  {project.title}
                 </h4>
                 {currentLanguage === "pt" ? (
-                  <p className="text-lg text-center lg:text-left">
+                  <p className="text-base xsm:text-xl text-center lg:text-left">
                     {project.description}
                   </p>
                 ) : (
-                  <p className="text-lg text-center lg:text-left">
+                  <p className="text-base xsm:text-xl text-center lg:text-left">
                     {project.descriptionEn}
                   </p>
                 )}

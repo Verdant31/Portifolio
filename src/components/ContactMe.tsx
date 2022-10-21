@@ -50,8 +50,8 @@ export const ContactMe: React.FC = () => {
       <h3 className="tracking-[12px] absolute top-20 xsm:top-24 uppercase trackng-[20px] text-gray-500 text-2xl">
         {currentLanguage === "pt" ? "CONTATO" : "CONTACT"}
       </h3>
-      <div className="flex flex-col xsm:space-y-10 space-y-6">
-        <h4 className="text-xl md:text-4xl font-semibold text-center px-4">
+      <div className="flex flex-col xsm:space-y-10 space-y-6 mt-4 xsm:mt-0">
+        <h4 className="text-base xsm:text-lg md:text-4xl font-semibold text-center px-4">
           {currentLanguage === "pt"
             ? "Posso te ajudar com o desenvolvimento de sites. "
             : "I can help you with sites development. "}
@@ -105,7 +105,7 @@ export const ContactMe: React.FC = () => {
           />
           <button
             type="submit"
-            className="bg-green-500 py-5 px-10 rounded-md text-black font-bold text-lg"
+            className="bg-green-500 py-0 xsm:py-4 md:py-7 px-10 rounded-md text-black font-bold text-lg"
           >
             {currentLanguage === "pt" ? "Enviar" : "Submit"}
           </button>
