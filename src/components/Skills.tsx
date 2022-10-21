@@ -26,7 +26,7 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
           ? "Passe o mouse por cima de uma skill para ver a proficiência"
           : "Hover over a skill for currency profieciency"}
       </h3>
-      <div className="grid grid-cols-4 gap-5 md:mt-24 mt-24 lg:pt-24">
+      <div className="grid grid-cols-4 gap-5 lg:gap-16 md:mt-24 mt-24 lg:pt-24">
         {skills.map((skill) => (
           <Skill key={skill.name} skill={skill} />
         ))}

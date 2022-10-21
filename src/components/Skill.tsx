@@ -13,9 +13,9 @@ export const Skill: React.FC<SkillProps> = ({ skill }: SkillProps) => {
         className="rounded-md  object-contain w-12 h-12 xsm:w-16 xsm:h-16 xl:w-32 xl:h-32 filter group-hover:grayscale md:w-28 md:h-28 transition duration-300 ease-in-out"
         src={skill.logo}
       />
-      <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white h-16 w-16 md:w-28 md:h-28 xl:w-32 xl:h-32 rounded-md z-0">
+      <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white w-12 h-12 xsm:w-16 xsm:h-16 xl:w-32 xl:h-32 rounded-md z-0">
         <div className="flex items-center justify-center h-full">
-          <p className="text-3xl font-bold text-black opacity-100">
+          <p className=" md:text-xl font-bold text-black opacity-100">
             {skill.proficiency}%
           </p>
         </div>
