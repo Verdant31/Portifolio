@@ -17,7 +17,7 @@ export const ContactMe: React.FC = () => {
     e.preventDefault();
     if (!messageRef.current?.value) return;
     await axios
-      .get(`localhost:3000/api/sendemail`, {
+      .get(`/api/sendemail`, {
         params: {
           message: messageRef.current?.value,
           name: nameRef.current?.value,
@@ -42,16 +42,16 @@ export const ContactMe: React.FC = () => {
   };
   return (
     <motion.div
-      className="pt-12 h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
+      className="pt-12 h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto md:pt-40 z-0"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
     >
-      <h3 className="tracking-[12px] absolute top-20 xsm:top-24 uppercase trackng-[20px] text-gray-500 text-2xl">
+      <h3 className="tracking-[12px] absolute top-20 left-[50%] -translate-x-1/2 uppercase trackng-[20px] text-gray-500 text-xl md:text-2xl">
         {currentLanguage === "pt" ? "CONTATO" : "CONTACT"}
       </h3>
-      <div className="flex flex-col xsm:space-y-10 space-y-6 mt-4 xsm:mt-0">
-        <h4 className="text-base xsm:text-lg md:text-4xl font-semibold text-center px-4">
+      <div className="flex flex-col xsm:space-y-4 md:space-y-6 xsm:mt-0">
+        <h4 className="text-base xsm:text-lg md:text-4xl font-semibold text-center px-4 mb-4">
           {currentLanguage === "pt"
             ? "Posso te ajudar com o desenvolvimento de sites. "
             : "I can help you with sites development. "}
@@ -59,16 +59,16 @@ export const ContactMe: React.FC = () => {
             {currentLanguage === "pt" ? "Bora conversar?" : "Let's talk?"}
           </span>
         </h4>
-        <div className="space-y-4">
-          <div className="flex items-center space-x-5 justify-center">
+        <div>
+          <div className="flex items-center space-x-5 justify-center mb-4">
             <PhoneIcon className="text-green-500 h-7 w-7 animate-pulse" />
             <p>+55 (67) 99973-6552</p>
           </div>
-          <div className="flex items-center space-x-5 justify-center">
+          <div className="flex items-center space-x-5 justify-center my-4">
             <EnvelopeIcon className="text-green-500 h-7 w-7 animate-pulse" />
             <p>verdantxd@gmail.com</p>
           </div>
-          <div className="flex items-center space-x-5 justify-center">
+          <div className="flex items-center space-x-5 justify-center my-4">
             <MapPinIcon className="text-green-500 h-7 w-7 animate-pulse" />
             <p>Curitiba - PR</p>
           </div>
@@ -105,7 +105,7 @@ export const ContactMe: React.FC = () => {
           />
           <button
             type="submit"
-            className="bg-green-500 py-0 xsm:py-4 md:py-7 px-10 rounded-md text-black font-bold text-lg"
+            className="bg-green-500 py-0  md:py-7 px-10 rounded-md text-black font-bold text-lg"
           >
             {currentLanguage === "pt" ? "Enviar" : "Submit"}
           </button>

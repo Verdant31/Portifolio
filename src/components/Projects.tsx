@@ -17,7 +17,7 @@ export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
     >
-      <h3 className="tracking-[12px] absolute top-20 uppercase trackng-[20px] text-gray-500 text-2xl">
+      <h3 className="tracking-[12px] absolute top-20 uppercase trackng-[20px] text-gray-500  text-lg md:text-2xl">
         {currentLanguage === "pt" ? "PROJETOS" : "PROJECTS"}
       </h3>
 
@@ -36,22 +36,22 @@ export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                 transition={{ duration: 1.2 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="rounded-md w-[380px] h-[190px] sm:w-[500px] sm:h-[320px] md:w-[600px] md:h-[340px] lg:w-[800px] lg:h-[480px]"
+                className="rounded-md w-[380px] h-[190px] sm:w-[500px] sm:h-[320px] md:w-[600px] md:h-[340px] lg:w-[600px] lg:h-[380px] lg:mt-14"
                 src={project.mockup}
                 alt=""
               />
-              <div className="space-y-4 md:space-y-10 px-0 md:px-10 max-w-6xl">
+              <div className="space-y-4 md:space-y-10 px-0 md:px-10 max-w-6xl lg:pt-14">
                 <h4 className="text-2xl lg:text-4xl font-semibold text-center">
                   <span className="underline decoration-green-500/50 ">
                     {project.title}
                   </span>{" "}
                 </h4>
                 {currentLanguage === "pt" ? (
-                  <p className="text-base xsm:text-xl text-center lg:text-left">
+                  <p className="text-base sm:text-lg text-center lg:text-left">
                     {project.description}
                   </p>
                 ) : (
-                  <p className="text-base xsm:text-xl text-center lg:text-left">
+                  <p className="text-base sm:text-lg text-center lg:text-left">
                     {project.descriptionEn}
                   </p>
                 )}

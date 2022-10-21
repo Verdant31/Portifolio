@@ -13,7 +13,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
   const { currentLanguage } = useLanguage();
   const { height } = useWindowSize();
   return (
-    <article className="flex flex-col h-[530px] rounded-lg text-left  flex-shrink-0 w-[240px] md:w-[600px]  snap-center bg-[#292929] cursor-pointer  pt-6  overflow-hidden ">
+    <article className="flex flex-col lg:h-[630px] items-center  rounded-lg text-left  flex-shrink-0 w-[240px] md:w-[600px]  snap-center bg-[#292929] cursor-pointer  pt-6  overflow-hidden ">
       {height > 658 && (
         <motion.img
           initial={{
@@ -28,9 +28,9 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
           alt=""
         />
       )}
-      <div className="px-0 md:px-10">
+      <div className="px-2 md:px-10">
         <div className="flex flex-col items-center justify-center">
-          <h4 className="text-base md:text-4xl text-center xsm:text-left font-light">
+          <h4 className="text-base md:text-4xl text-center font-light">
             {experience.title}
           </h4>
           <p className="text-xl font-bold md:text-2xl mt-1">
@@ -38,7 +38,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
           </p>
           <div className="flex space-x-2 " />
           <p className="uppercase py-1 text-gray-300 text-center xsm:text-left">
-            Started work {experience.startedAt} - Ended {experience.finishedAt}
+            {experience.startedAt} - {experience.finishedAt}
           </p>
         </div>
         {currentLanguage === "pt" ? (

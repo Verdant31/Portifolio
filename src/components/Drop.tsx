@@ -4,9 +4,9 @@ import { Gear } from "phosphor-react";
 import { useLanguage } from "../contexts/LanguageContext";
 
 export const Drop: React.FC = () => {
-  const { changeLanguage } = useLanguage();
+  const { changeLanguage, currentLanguage } = useLanguage();
   return (
-    <div className="fixed lg:bottom-12 bottom-4 right-6 -translate-x-1/2 z-40 ">
+    <div className="fixed lg:bottom-12 bottom-6 right-0 lg:right-12 -translate-x-1/2 z-40 ">
       <Popover className="relative">
         <Popover.Button className="outline-none">
           <Gear
@@ -25,7 +25,7 @@ export const Drop: React.FC = () => {
           leaveFrom="opacity-100 translate-y-0"
           leaveTo="opacity-0 translate-y-1"
         >
-          <Popover.Panel className="fixed right-[50%] bottom-12 mt-3 w-[200px]">
+          <Popover.Panel className="fixed right-[50%] bottom-12 mt-3 w-[200px] lg:w-[240px]">
             <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
               <div className="bg-gray-700 p-4 pl-4 pr-4 pb-3 flex justify-between  items-center gap-4">
                 <a href="#hero" className="text-sm text-gray-300 font-semibold">
@@ -38,7 +38,8 @@ export const Drop: React.FC = () => {
                   onClick={changeLanguage}
                   className="text-sm text-gray-300 font-semibold"
                 >
-                  Mudar idioma para Inglês
+                  Mudar idioma para{" "}
+                  {currentLanguage === "pt" ? "Inglês" : "Português"}
                 </p>
               </div>
             </div>
