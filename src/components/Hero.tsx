@@ -26,7 +26,7 @@ export const Hero: React.FC = () => {
       <div className="relative flex ">
         <div className="animate-pulse">
           <img
-            className="w-[300px] h-[300px] md:w-[500px] md:h-[430px] opacity-40 mr-4"
+            className="w-[250px] h-[250px] md:w-[500px] md:h-[430px] opacity-40 mr-4"
             src="triangles.png"
             alt="Imagem de um triangulo"
           />
@@ -36,9 +36,9 @@ export const Hero: React.FC = () => {
           <Cursor cursorColor="#02cd1a" />
         </h1>
       </div>
-      <div className="flex md:gap-x-6 mt-12 ">
+      <div className="flex flex-col xsm:flex-row md:gap-x-6 mt-12 ">
         <a href="#about" className="linkToSections">
-          {currentLanguage === "pt" ? "SOBRE MIM" : "ABOUT ME"}
+          {currentLanguage === "pt" ? "SOBRE" : "ABOUT"}
         </a>
         <a href="#experience" className="linkToSections">
           {currentLanguage === "pt" ? "EXPERIÊNCIA" : "EXPERIENCE"}

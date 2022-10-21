@@ -28,12 +28,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       activities: [
         "Atuação no desenvolvimento de projetos internos.",
         "Criação de plataformas web para automatizar processos burocráticos da instituição.",
-        "Responsável pelo desenvolvimento tanto do Backend quanto do Frontend em todos os projetos, utilizando tecnologias como React, NodeJS, Heroku e PostgreSQL.",
+        "Desenvolvimento tanto do Backend quanto do Frontend em todos os projetos, utilizando tecnologias como React, NodeJS, Heroku e PostgreSQL.",
       ],
       activitiesEn: [
         "Acting in the development of internal projects.",
         "Creation of web platforms to automate bureaucratic processes of the institution.",
-        "Responsible for the development of both Backend and Frontend in all projects, using technologies such as React, NodeJS, Heroku and PostgreSQL.",
+        "Development of Back and Frontend in all projects, using technologies such as React, NodeJS, Heroku and PostgreSQL.",
       ],
       logo: `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/up.png`,
     },
