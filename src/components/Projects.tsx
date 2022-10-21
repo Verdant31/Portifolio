@@ -40,7 +40,7 @@ export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                   ${
                     project.title !== "SaveIt"
                       ? "w-[380px] h-[190px] sm:w-[500px] sm:h-[320px] md:w-[600px] md:h-[340px] lg:w-[600px] lg:h-[380px]"
-                      : "w-[180px] h-[240px]  sm:h-[320px] md:w-[200px] md:h-[340px]"
+                      : "w-[180px] h-[290px]  sm:h-[320px] md:w-[200px] md:h-[340px]"
                   }
                 `}
                 src={project.mockup}
