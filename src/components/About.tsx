@@ -17,12 +17,12 @@ export const About = ({ about }: AboutProps) => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
     >
-      <h1 className="tracking-[12px] absolute top-24 uppercase trackng-[20px] text-gray-500 text-2xl">
+      <h1 className="tracking-[12px] absolute top-24 uppercase trackng-[20px] text-gray-500 text-lg md:text-2xl">
         {currentLanguage === "pt" ? "SOBRE MIM" : "ABOUT ME"}
       </h1>
       <div />
       <motion.img
-        className="-mb-16 sm:-mb-20 md:mb-0 flex-shrink-0 w-42 h-40 sm:w-56 sm:h-56 object-cover md:w-80 md:h-80 xl:w-[500px] xl:h-[500px] xl:mr-8"
+        className="-mb-16 flex-shrink-0 w-32 h-32 sm:-mb-20 sm:w-56 sm:h-56 object-cover md:mb-0 md:w-80 md:h-80 xl:w-[500px] xl:h-[500px] xl:mr-8"
         initial={{
           x: -200,
           opacity: 0,
@@ -34,8 +34,8 @@ export const About = ({ about }: AboutProps) => {
         src={about.profilePic}
         viewport={{ once: true }}
       />
-      <div className="space-y-5 px-0 md:px-10 ">
-        <h4 className="text-2xl md:text-4xl font-semibold">
+      <div className="px-0 md:px-10">
+        <h4 className="text-xl md:text-4xl font-semibold">
           {currentLanguage === "pt" ? "Aqui vai um " : "Here is a "}
           {currentLanguage === "pt" ? (
             <>
@@ -50,7 +50,7 @@ export const About = ({ about }: AboutProps) => {
           )}
         </h4>
         {currentLanguage === "pt" ? (
-          <p className="text-base">{about.about}</p>
+          <p className="text-base pt-2">{about.about}</p>
         ) : (
           <p className="text-base">{about.aboutEn}</p>
         )}

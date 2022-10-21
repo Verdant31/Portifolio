@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       screens: {
         xsm: "370px",
+        smMd: "560px",
       },
       colors: {
         gray: {
